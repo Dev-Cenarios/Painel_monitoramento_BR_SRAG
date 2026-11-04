@@ -1,0 +1,26 @@
+# Segredos / config local - NUNCA versionar
+.Renviron
+.env
+*.pem
+*.key
+
+# Dados gerados pelo ETL a partir do banco (regeneraveis com
+# `Rscript etl_gripe_br.R`). Sao agregados de dado publico (OpenDataSUS),
+# mas com celulas pequenas em municipios pequenos - ficam fora do git por
+# padrao, como no dengue_df.
+data/*.parquet
+
+# Cache, lixo de depuracao e arquivos do shiny-server
+app_cache/
+Rplot*.png
+restart.txt
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
